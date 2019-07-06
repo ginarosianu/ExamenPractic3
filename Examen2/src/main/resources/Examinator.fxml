@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="center" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ExaminatorController">
+
+    <VBox maxWidth="1.7976931348623157E308" prefHeight="759.0" prefWidth="737.0" spacing="10">
+        <Label text="Examinatori:" />
+        <TableView fx:id="tableViewPersoana" editable="true" fixedCellSize="0.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="275.0" prefWidth="737.0" tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="tableColumnId" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="223.00001525878906" resizable="false" text="Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="tableColumnNume" prefWidth="176.0" text="Nume Examinator">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="Nume" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="tableColumnCNP" prefWidth="154.0" text="CNP">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="CNP" />
+                    </cellValueFactory>
+                </TableColumn>
+
+
+            </columns>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </TableView>
+
+        <Label text="Add:" />
+        <TextField fx:id="txtPersoanaId" promptText="ID" />
+        <TextField fx:id="txtPersoanaNume" promptText="Nume" />
+        <TextField fx:id="txtPersoanaCNP" promptText="CNP" />
+
+
+        <HBox alignment="center" spacing="40">
+            <Button fx:id="btnAddPersoana" onAction="#btnAddPersoana" text="Add or update examinator" />
+
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </HBox>
+
+        <!--&lt;!&ndash;<TextField fx:id="txtSumDay" promptText="day(dd.mm.yyyy"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextField fx:id="txtSumResult" promptText="result" editable="false"/>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<HBox alignment="center" spacing="40">&ndash;&gt;-->
+        <!--&lt;!&ndash;<Button fx:id="btnSumForDay" onAction="#btSumForDayClick" text="Compute sum for given date"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<VBox.margin>&ndash;&gt;-->
+        <!--&lt;!&ndash;<Insets/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</VBox.margin>&ndash;&gt;-->
+        <!--</HBox>-->
+
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+
+    </VBox>
+
+</HBox>
